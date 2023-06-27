@@ -1,0 +1,52 @@
+
+
+
+
+
+
+
+
+
+ls -l | sed -n 'n;p'
+
+
+find . \( -type d,f \) -name "*.sh" | sort -r | sed 's/.sh//g' | sed 's/^.*\///g
+
+find \( -name 'a*' -o -name '*z' \) -o -name 'z**a!'
+
+
+
+
+find . -type d,f | wc -l
+
+find | wc -l
+
+
+curl -s https://raw.githubusercontent.com/kigiri/superhero-api/master/api/all.json | awk -v hero="$HERO_ID" -F'"' '$4 == hero {getline; getline; print $4}'
+
+
+https://github.com/altyn-bulmers/piscine-go
+
+
+
+#!/usr/bin/env bash
+
+INTERVIEWNUMBER=$(head -n 179 streets/Buckingham_Place | tail -n 1 | cut -d "#" -f2)
+echo $INTERVIEWNUMBER
+cat interviews/interview-"$INTERVIEWNUMBER"
+echo $MAIN_SUSPECT
+
+
+
+#!/usr/bin/env bash
+
+INTERVIEWNUMBER=$(head -n 179 streets/Buckingham_Place | tail -n 1 | cut -d "#" -f2)
+
+echo "Interview number: $INTERVIEWNUMBER"
+
+INTERVIEW_FILE="interviews/interview-$INTERVIEWNUMBER"
+echo "Interview content:"
+cat "$INTERVIEW_FILE"
+
+MAIN_SUSPECT environment variable
+echo "MAIN_SUSPECT: $MAIN_SUSPECT"
